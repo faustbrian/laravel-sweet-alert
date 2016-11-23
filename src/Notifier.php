@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel Sweet Flash.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\SweetFlash;
 
 use Illuminate\Session\Store;
@@ -92,7 +101,7 @@ class Notifier
 
         $this->session->flash('sweet_flash.flash', json_encode($this->config));
 
-        if (!empty($this->callback)) {
+        if (! empty($this->callback)) {
             $this->session->flash('sweet_flash.callback', $this->callback);
         }
 
