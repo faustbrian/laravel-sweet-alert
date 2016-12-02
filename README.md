@@ -15,9 +15,7 @@ $ composer require faustbrian/laravel-sweet-flash
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\SweetFlash\ServiceProvider::class
-];
+BrianFaust\SweetFlash\SweetFlashServiceProvider::class
 ```
 
 ## Usage
