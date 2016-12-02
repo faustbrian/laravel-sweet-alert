@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Tests\SweetFlash\Facades;
 
-use GrahamCampbell\TestBenchCore\FacadeTrait;
-use BrianFaust\Tests\SweetFlash\AbstractTestCase;
 use BrianFaust\SweetFlash\Facades\SweetFlash;
 use BrianFaust\SweetFlash\Notifier;
+use BrianFaust\Tests\SweetFlash\AbstractTestCase;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 class SweetFlashTest extends AbstractTestCase
 {

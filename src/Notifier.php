@@ -20,7 +20,7 @@ class Notifier
     private $config = [
         'allowOutsideClick' => true,
         'showConfirmButton' => false,
-        'timer' => 1800,
+        'timer'             => 1800,
     ];
 
     private $callback;
@@ -101,7 +101,7 @@ class Notifier
 
         $this->session->flash('sweet_flash.flash', json_encode($this->config));
 
-        if (! empty($this->callback)) {
+        if (!empty($this->callback)) {
             $this->session->flash('sweet_flash.callback', $this->callback);
         }
 
