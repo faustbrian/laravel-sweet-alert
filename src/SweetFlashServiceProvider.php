@@ -11,7 +11,9 @@
 
 namespace BrianFaust\SweetFlash;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+use BrianFaust\ServiceProvider\ServiceProvider;
+
+class SweetFlashServiceProvider extends ServiceProvider
 {
     public function boot()
     {
