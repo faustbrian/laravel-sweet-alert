@@ -9,20 +9,22 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\SweetFlash;
 
 use BrianFaust\ServiceProvider\ServiceProvider;
 
 class SweetFlashServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         $this->publishViews();
 
         $this->loadViews();
     }
 
-    public function register()
+    public function register(): void
     {
         parent::register();
 
@@ -31,12 +33,12 @@ class SweetFlashServiceProvider extends ServiceProvider
         });
     }
 
-    public function provides()
+    public function provides(): array
     {
         return array_merge(parent::provides(), ['sweet-flash']);
     }
 
-    public function getPackageName()
+    public function getPackageName(): string
     {
         return 'sweet-flash';
     }
