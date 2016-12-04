@@ -41,7 +41,7 @@ class Notifier
         $this->session = $session;
     }
 
-    public function message($text, $type = 'info', $title = '')
+    public function message(string $text, $type = 'info', ?string $title): self
     {
         return $this->config('text', $text)
                     ->config('type', $type)
@@ -49,33 +49,33 @@ class Notifier
                     ->commit();
     }
 
-    public function success($text, $title = '')
+    public function success(string $text, ?string $title): self
     {
         return $this->message($text, 'success', $title);
     }
 
-    public function info($text, $title = '')
+    public function info(string $text, ?string $title): self
     {
         return $this->message($text, 'info', $title);
     }
 
-    public function warning($text, $title = '')
+    public function warning(string $text, ?string $title): self
     {
         return $this->message($text, 'warning', $title);
     }
 
-    public function error($text, $title = '')
+    public function error(string $text, ?string $title): self
     {
         return $this->message($text, 'error', $title);
     }
 
-    public function autoclose($milliseconds = 2000)
+    public function autoclose(int $milliseconds = 2000): self
     {
         return $this->config('timer', $milliseconds)
                     ->commit();
     }
 
-    public function persistent($buttonText = 'OK')
+    public function persistent(string $buttonText = 'OK'): self
     {
         return $this->config('confirmButtonText', $buttonText)
                     ->config('showConfirmButton', true)
@@ -84,14 +84,14 @@ class Notifier
                     ->commit();
     }
 
-    public function callback($value)
+    public function callback(string $value): self
     {
         $this->callback = $value;
 
         return $this;
     }
 
-    public function config($key, $value = null)
+    public function config($key, $value = null): self
     {
         if (is_array($key)) {
             foreach ($key as $k => $v) {
@@ -104,7 +104,7 @@ class Notifier
         return $this;
     }
 
-    public function commit()
+    public function commit(): self
     {
         foreach ($this->config as $key => $value) {
             $this->session->flash("sweet_flash.{$key}", $value);
@@ -119,7 +119,7 @@ class Notifier
         return $this;
     }
 
-    public function custom($config)
+    public function custom(array $config): self
     {
         return $this->config($config)
                     ->commit();

@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Facade;
 
 class SweetFlash extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'sweet-flash';
     }
