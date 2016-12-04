@@ -22,9 +22,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\SweetFlash;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class SweetFlashServiceProvider extends ServiceProvider
+class SweetFlashServiceProvider extends AbstractServiceProvider
 {
     public function boot(): void
     {
