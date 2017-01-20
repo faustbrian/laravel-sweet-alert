@@ -41,7 +41,7 @@ class Notifier
         $this->session = $session;
     }
 
-    public function message(string $text, $type = 'info', ?string $title): self
+    public function message(string $text, $type, ?string $title): self
     {
         return $this->config('text', $text)
                     ->config('type', $type)
