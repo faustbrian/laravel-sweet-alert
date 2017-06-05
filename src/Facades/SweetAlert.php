@@ -1,10 +1,7 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
- * This file is part of Laravel Sweet Flash.
+ * This file is part of Laravel Sweet Alert.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -12,14 +9,14 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\SweetFlash\Facades;
+namespace BrianFaust\SweetAlert\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class SweetFlash extends Facade
+class SweetAlert extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'sweet-flash';
+        return 'sweet-alert';
     }
 }

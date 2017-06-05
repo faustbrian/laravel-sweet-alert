@@ -1,10 +1,7 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
- * This file is part of Laravel Sweet Flash.
+ * This file is part of Laravel Sweet Alert.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -12,25 +9,25 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\SweetFlash\Facades;
+namespace BrianFaust\Tests\SweetAlert\Facades;
 
-use BrianFaust\SweetFlash\Facades\SweetFlash;
-use BrianFaust\SweetFlash\Notifier;
-use BrianFaust\Tests\SweetFlash\AbstractTestCase;
+use BrianFaust\SweetAlert\Facades\SweetAlert;
+use BrianFaust\SweetAlert\Notifier;
+use BrianFaust\Tests\SweetAlert\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 
-class SweetFlashTest extends AbstractTestCase
+class SweetAlertTest extends AbstractTestCase
 {
     use FacadeTrait;
 
     protected function getFacadeAccessor()
     {
-        return 'sweet-flash';
+        return 'sweet-alert';
     }
 
     protected function getFacadeClass()
     {
-        return SweetFlash::class;
+        return SweetAlert::class;
     }
 
     protected function getFacadeRoot()

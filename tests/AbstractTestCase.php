@@ -1,10 +1,7 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
- * This file is part of Laravel Sweet Flash.
+ * This file is part of Laravel Sweet Alert.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -12,14 +9,21 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\SweetFlash;
+namespace BrianFaust\Tests\SweetAlert;
 
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
 
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {
+    /**
+     * Get the service provider class.
+     *
+     * @param \Illuminate\Contracts\Foundation\Application $app
+     *
+     * @return string
+     */
     protected function getServiceProviderClass($app): string
     {
-        return \BrianFaust\SweetFlash\ServiceProvider::class;
+        return \BrianFaust\SweetAlert\Providers\ServiceProvider::class;
     }
 }

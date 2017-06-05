@@ -1,4 +1,4 @@
-# Laravel Sweet-Flash
+# Laravel Sweet-Alert
 
 I would appreciate you taking the time to look at my [Patreon](https://www.patreon.com/faustbrian) and considering to support me if I'm saving you some time with my work.
 
@@ -11,13 +11,13 @@ I would appreciate you taking the time to look at my [Patreon](https://www.patre
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-sweet-flash
+$ composer require faustbrian/laravel-sweet-alert
 ```
 
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-BrianFaust\SweetFlash\SweetFlashServiceProvider::class
+BrianFaust\SweetAlert\SweetAlertServiceProvider::class
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ BrianFaust\SweetFlash\SweetFlashServiceProvider::class
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.0.1/sweetalert.min.js"></script>
-        @include('sweet::flash')
+        @include('sweet::alert')
     </body>
 </html>
 
@@ -107,19 +107,11 @@ sweet()->config('title', 'Are you sure?')
 return redirect()->route('dashboard');
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 $ phpunit
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 

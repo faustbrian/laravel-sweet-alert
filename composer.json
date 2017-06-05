@@ -1,7 +1,7 @@
 {
-    "name": "faustbrian/laravel-sweet-flash",
-    "description": "Flash messages through SweetAlert for Laravel 5.",
-    "keywords": ["laravel", "framework", "Laravel-sweet-flash", "Laravel Sweet Flash", "Brian Faust", "faustbrian"],
+    "name": "faustbrian/laravel-sweet-alert",
+    "description": "Alert messages through SweetAlert for Laravel 5.",
+    "keywords": ["laravel", "framework", "Laravel-sweet-alert", "Laravel Sweet Alert", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
@@ -9,18 +9,18 @@
         "homepage": "https://brianfaust.de"
     }],
     "require": {
-        "php": "^7.1",
-        "faustbrian/laravel-service-provider": "^1.0",
-        "illuminate/session": "5.3.* || 5.4.*"
+        "php": "^7.0",
+        "illuminate/support": "5.3.* || 5.4.* || 5.5.*",
+        "illuminate/session": "5.3.* || 5.4.* || 5.5.*"
     },
     "require-dev": {
-        "graham-campbell/testbench": "^3.2",
+        "graham-campbell/testbench": "^3.3",
         "mockery/mockery": "^0.9.5",
-        "phpunit/phpunit": "^5.6"
+        "phpunit/phpunit": "^6.1"
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\SweetFlash\\": "src/"
+            "BrianFaust\\SweetAlert\\": "src/"
         },
         "files": [
             "src/functions.php"
@@ -28,15 +28,24 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\SweetFlash\\": "tests"
+            "BrianFaust\\Tests\\SweetAlert\\": "tests"
         }
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "BrianFaust\\SweetAlert\\SweetAlertServiceProvider"
+            ],
+            "aliases": {
+                "SweetAlert": "BrianFaust\\SweetAlert\\Facades\\SweetAlert"
+            }
         }
     },
     "minimum-stability": "dev",

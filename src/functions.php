@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Laravel Sweet Flash.
+ * This file is part of Laravel Sweet Alert.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -12,7 +12,7 @@
 if (!function_exists('sweet')) {
     function sweet($message = null)
     {
-        $notifier = app('sweet-flash');
+        $notifier = app('sweet-alert');
 
         if (!is_null($message)) {
             return $notifier->message($message);
