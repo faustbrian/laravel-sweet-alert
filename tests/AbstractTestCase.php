@@ -24,6 +24,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      */
     protected function getServiceProviderClass($app): string
     {
-        return \BrianFaust\SweetAlert\Providers\ServiceProvider::class;
+        return \BrianFaust\SweetAlert\SweetAlertServiceProvider::class;
     }
 }
