@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Laravel Sweet Flash.
+ * This file is part of Laravel Sweet Alert.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
