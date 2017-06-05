@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Laravel Sweet Alert.
+ * This file is part of Laravel Sweet Flash.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -20,7 +20,7 @@ class Notifier
     private $config = [
         'allowOutsideClick' => true,
         'showConfirmButton' => false,
-        'timer' => 1800,
+        'timer'             => 1800,
     ];
 
     private $callback;
