@@ -15,6 +15,9 @@ use Illuminate\Support\ServiceProvider;
 
 class SweetAlertServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any application services.
+     */
     public function boot()
     {
         $this->publishes([
@@ -24,6 +27,9 @@ class SweetAlertServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-sweet-alert');
     }
 
+    /**
+     * Register any application services.
+     */
     public function register()
     {
         $this->app->singleton('sweet-alert', function ($app) {
