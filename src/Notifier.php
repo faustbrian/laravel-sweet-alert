@@ -20,7 +20,7 @@ class Notifier
     private $config = [
         'allowOutsideClick' => true,
         'showConfirmButton' => false,
-        'timer' => 1800,
+        'timer'             => 1800,
     ];
 
     private $callback;
