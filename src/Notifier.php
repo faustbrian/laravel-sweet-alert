@@ -101,7 +101,7 @@ class Notifier
 
         $this->session->flash('sweet_flash.flash', json_encode($this->config));
 
-        if (!empty($this->callback)) {
+        if (! empty($this->callback)) {
             $this->session->flash('sweet_flash.callback', $this->callback);
         }
 
