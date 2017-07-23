@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Tests\SweetAlert\Facades;
 
-use BrianFaust\SweetAlert\Facades\SweetAlert;
 use BrianFaust\SweetAlert\Notifier;
-use BrianFaust\Tests\SweetAlert\AbstractTestCase;
+use BrianFaust\SweetAlert\Facades\SweetAlert;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
+use BrianFaust\Tests\SweetAlert\AbstractTestCase;
 
 class SweetAlertTest extends AbstractTestCase
 {
