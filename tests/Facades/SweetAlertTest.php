@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Tests\SweetAlert\Facades;
 
-use BrianFaust\SweetAlert\Notifier;
 use BrianFaust\SweetAlert\Facades\SweetAlert;
-use GrahamCampbell\TestBenchCore\FacadeTrait;
+use BrianFaust\SweetAlert\Notifier;
 use BrianFaust\Tests\SweetAlert\AbstractTestCase;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 class SweetAlertTest extends AbstractTestCase
 {
