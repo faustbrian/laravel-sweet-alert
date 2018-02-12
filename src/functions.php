@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-if (! function_exists('sweet')) {
+if (!function_exists('sweet')) {
     function sweet($message = null)
     {
         $notifier = app('sweet-alert');
 
-        if (! is_null($message)) {
+        if (!is_null($message)) {
             return $notifier->message($message);
         }
 
