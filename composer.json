@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-sweet-alert",
+    "name": "artisanry/sweet-alert",
     "description": "Alert messages through SweetAlert for Laravel 5.",
-    "keywords": ["laravel", "framework", "Laravel-sweet-alert", "Laravel Sweet Alert", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-sweet-alert", "Laravel Sweet Alert"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\SweetAlert\\": "src/"
+            "Artisanry\\SweetAlert\\": "src/"
         },
         "files": [
             "src/functions.php"
@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\SweetAlert\\": "tests"
+            "Artisanry\\Tests\\SweetAlert\\": "tests"
         }
     },
     "config": {
@@ -41,10 +41,10 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\SweetAlert\\SweetAlertServiceProvider"
+                "Artisanry\\SweetAlert\\SweetAlertServiceProvider"
             ],
             "aliases": {
-                "SweetAlert": "BrianFaust\\SweetAlert\\Facades\\SweetAlert"
+                "SweetAlert": "Artisanry\\SweetAlert\\Facades\\SweetAlert"
             }
         }
     },
